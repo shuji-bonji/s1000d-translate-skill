@@ -1,0 +1,22 @@
+[
+  {"query": "この DM を英語（en-US）にして", "should_trigger": true},
+  {"query": "CSDB の日本語の手順 DM を en-US 版にしたい。同じ DMC で言語だけ変えて", "should_trigger": true},
+  {"query": "DM を翻訳して、xcomet で採点して、低いところは DeepL と比べて決めて", "should_trigger": true},
+  {"query": "extract_segments で取り出した文を訳して apply_segments で戻してほしい", "should_trigger": true},
+  {"query": "S1000D の説明 DM を日本語版にして。用語集は terms.csv を使って", "should_trigger": true},
+  {"query": "訳した DM に unapplied が出た。どう直せばいい？", "should_trigger": true},
+  {"query": "skeleton-mismatch で止まったんだけど、どうすればいい", "should_trigger": true},
+  {"query": "DM の多言語版を作りたい。まず 1 件、ドイツ語にしてみて", "should_trigger": true},
+  {"query": "手順 DM の翻訳で、プレースホルダー {1} が消えないように訳して", "should_trigger": true},
+  {"query": "translate this S1000D data module into Japanese and keep the same DMC", "should_trigger": true},
+  {"query": "この DM をレビューして、指摘を comment DM にして", "should_trigger": false},
+  {"query": "BREX の手動確認の項目を DM と照らして確認して", "should_trigger": false},
+  {"query": "体験型マニュアルの JSON を S1000D に変換して", "should_trigger": false},
+  {"query": "下書きから S1000D の説明 DM を作って検証して", "should_trigger": false},
+  {"query": "PDF 仕様書の用語を DeepL の用語集で統一して日本語に訳して", "should_trigger": false},
+  {"query": "このメールの文面を丁寧な英語に翻訳して", "should_trigger": false},
+  {"query": "長い技術ブログの記事を英語に訳して、採点もして", "should_trigger": false},
+  {"query": "契約書 PDF の電子署名を検証して", "should_trigger": false},
+  {"query": "README の日本語を英語にして", "should_trigger": false},
+  {"query": "日本語の議事録を校正して、読みやすく直して", "should_trigger": false}
+]

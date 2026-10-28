@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/.claude-plugin/plugin.schema.json",
+  "name": "s1000d-translate",
+  "version": "0.1.0",
+  "dependencies": [
+    "s1000d-writer-mcp"
+  ],
+  "description": "S1000D のデータモジュールの翻訳 Skill。writer の extract_segments で文を取り出し、LLM が訳し、xcomet-mcp で採点し、低得点の文は DeepL の訳と比べて採用を決め、apply_segments で同じ DMC・言語だけ違う DM に差し戻す。Translation Report を返す。ASD とは無関係の個人プロジェクト。S1000D® は ASD の登録商標。",
+  "author": {
+    "name": "shuji-bonji",
+    "email": "bonji@mikuro.jp",
+    "url": "https://github.com/shuji-bonji"
+  },
+  "homepage": "https://github.com/shuji-bonji/s1000d-translate-skill",
+  "repository": "https://github.com/shuji-bonji/s1000d-translate-skill",
+  "license": "MIT",
+  "keywords": [
+    "s1000d",
+    "skill",
+    "translation",
+    "data-module",
+    "xcomet",
+    "deepl",
+    "csdb"
+  ]
+}
