@@ -53,7 +53,7 @@ DeepL に本文を送る前に、DM の `securityClassification` を利用者に
 | [@shuji-bonji/s1000d-writer-mcp](https://www.npmjs.com/package/@shuji-bonji/s1000d-writer-mcp) | 必須 | `extract_segments`、`apply_segments` | 0.1.1 |
 | [xcomet-mcp-server](https://www.npmjs.com/package/xcomet-mcp-server) | 任意 | `xcomet_batch_evaluate`（採点） | 0.7.0（確認した版） |
 | DeepL の MCP | 任意 | `translate-text`、用語集 | - |
-| [@shuji-bonji/s1000d-reader-mcp](https://www.npmjs.com/package/@shuji-bonji/s1000d-reader-mcp) | 任意 | 機密区分の確認、訳した DM の読み取り | 0.7.0 |
+| [@shuji-bonji/s1000d-reader-mcp](https://www.npmjs.com/package/@shuji-bonji/s1000d-reader-mcp) | 任意 | 機密区分の確認、訳した DM の読み取り | 0.7.1 |
 
 `s1000d-writer-mcp` は `plugin.json` の `dependencies` に入っています。writer サーバーには、利用者ご自身が入手した S1000D の配布物（`S1000D_SPEC_DIR`）と CSDB のフォルダー（`S1000D_CSDB_DIR`）が要ります。
 

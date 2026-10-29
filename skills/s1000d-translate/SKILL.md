@@ -24,7 +24,7 @@ DM を別の言語に訳し、同じ DMC で `language` だけが違う DM を�
 | s1000d-writer-mcp | **必須** | `extract_segments`（文の取り出し）、`apply_segments`（差し戻しと検証） | 0.1.1 |
 | xcomet-mcp-server | 任意 | `xcomet_batch_evaluate`（訳文の採点）、`xcomet_detect_errors`（誤りの箇所） | 0.7.0 |
 | DeepL の MCP | 任意 | `translate-text`（比較用の訳）、用語集（`list-glossaries`）。用語集の作成は `deepl-glossary-translation` Skill | — |
-| s1000d-reader-mcp | 任意 | `read_data_module`（機密区分の確認、訳した DM を読んで見せる） | 0.7.0 |
+| s1000d-reader-mcp | 任意 | `read_data_module`（機密区分の確認、訳した DM を読んで見せる） | 0.7.1 |
 
 writer が無いときは、止まって次を伝える。
 
@@ -135,7 +135,8 @@ flowchart LR
 - 応答の `written`（書いたファイル）か `writeSkipped`（`no-csdb-dir`、`write-conflict`、`schema-invalid`）を読む。書かなかったときは理由を伝えて止まる
 - `write-conflict`（同じ名前のファイルがある）は、利用者が上書きを明示したときだけ `overwrite: true`
 - `schema-invalid` は、利用者が明示したときだけ `allowInvalid: true`
-- reader があれば、書いた DM を `read_data_module`（`section: "outline"`）で読み、訳先の言語になっていることを利用者に見せる
+- reader があれば、書いた DM を `read_data_module` の `section: "identAndStatus"`（または `all`）で読み、`language` と題名が訳先になっていることを利用者に見せる。**`section: "outline"` では訳先の言語も題名も出ない**（見出し・手順の番号・最初の文・大きさだけ）ので、確認には使わない。訳文の本文は `section: "content"` か `all` で読む
+- **書いた直後の DM が見えること。** reader 0.7.1 以降は、サーバーを起動した後に writer が書いた DM も次の呼び出しから見える。それより古い版は、起動時に作った CSDB の索引を使い続けるので、書いた直後の DM が見つからないことがある（`dmc` で読むとき）。その場合は reader を起動し直してから読む
 
 ### Phase 7 — Translation Report
 

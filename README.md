@@ -53,7 +53,7 @@ Before sending text to DeepL, the Skill shows the `securityClassification` of th
 | [@shuji-bonji/s1000d-writer-mcp](https://www.npmjs.com/package/@shuji-bonji/s1000d-writer-mcp) | Yes | `extract_segments`, `apply_segments` | 0.1.1 |
 | [xcomet-mcp-server](https://www.npmjs.com/package/xcomet-mcp-server) | No | `xcomet_batch_evaluate` (scoring) | 0.7.0 (version checked) |
 | DeepL MCP | No | `translate-text`, glossaries | - |
-| [@shuji-bonji/s1000d-reader-mcp](https://www.npmjs.com/package/@shuji-bonji/s1000d-reader-mcp) | No | Security classification, reading the translated DM | 0.7.0 |
+| [@shuji-bonji/s1000d-reader-mcp](https://www.npmjs.com/package/@shuji-bonji/s1000d-reader-mcp) | No | Security classification, reading the translated DM | 0.7.1 |
 
 `s1000d-writer-mcp` is listed in `dependencies` of `plugin.json`. The writer server needs the S1000D distribution you obtained yourself (`S1000D_SPEC_DIR`) and your CSDB folder (`S1000D_CSDB_DIR`).
 
