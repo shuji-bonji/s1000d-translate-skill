@@ -7,7 +7,7 @@ SKILL.md の Phase 7 で使う。DM が複数のときは、冒頭に DM ごと�
 
 - 対象: <DMC、版、元の言語、ファイル名>
 - 訳先: <languageIsoCode-countryIsoCode>、訳した DM のファイル名（推定を含む）: <fileName>
-- 使用ツール: <MCP の名前と、分かる範囲の版>
+- 使用ツール: <MCP ごとに、応答の最後の `_server` から `<name> <version>（core <core>）` と書き写す。`_server` の無い応答は「版の項目なし（D-38 より前の版）」と書く。版は解釈せず、npm の公開版との比較もしない>
 
 ## 機密区分
 
